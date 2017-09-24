@@ -68,7 +68,7 @@ public class Controller extends JFrame{
                 Double latitude = Double.parseDouble(JOptionPane.showInputDialog("Latitude: "));
                 Double longitude = Double.parseDouble(JOptionPane.showInputDialog("Longitude: "));
                 String descricao = JOptionPane.showInputDialog("Descrição: ");
-                Date data = new Date();
+                //Date data = new Date();
                 if(!descricao.isEmpty() && descricao != null){
                     Dados t = new Dados(latitude, longitude, descricao);
                     eventos.add(t);
