@@ -26,8 +26,8 @@ public class Dados {
 
     Dados() {
        this.latitude = null;
-        this.longitude = null;
-        this.descricao = null;
+       this.longitude = null;
+       this.descricao = null;
     }
 
     public String getLatitude() {
@@ -60,6 +60,11 @@ public class Dados {
 
     public void setDataEvento(Date dataEvento) {
         this.dataEvento = dataEvento;
+    }
+    
+    @Override
+    public String toString() {
+        return descricao;
     }
     
 }
