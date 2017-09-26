@@ -30,9 +30,9 @@ import javax.swing.event.ListSelectionListener;
 public class Controller extends JFrame{
     private final List<Dados> eventos;
     private final JList<Dados> lstEventos = new JList<>(new DefaultListModel<>());
-    private final JButton criarEvento = new JButton("Criar Turma");
-    private final JButton editarEvento = new JButton("Editar Turma");
-    private final JButton excluirEvento = new JButton("Excluir Turma");
+    private final JButton criarEvento = new JButton("Adicionar Evento");
+    private final JButton editarEvento = new JButton("Editar Evento");
+    private final JButton excluirEvento = new JButton("Excluir Evento");
     //private final Controller janelaDados = new Controller();
     
     public Controller(List<Dados> sampleData){
@@ -65,8 +65,8 @@ public class Controller extends JFrame{
         criarEvento.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Double latitude = Double.parseDouble(JOptionPane.showInputDialog("Latitude: "));
-                Double longitude = Double.parseDouble(JOptionPane.showInputDialog("Longitude: "));
+                String latitude = JOptionPane.showInputDialog("Latitude: ");
+                String longitude = JOptionPane.showInputDialog("Longitude: ");
                 String descricao = JOptionPane.showInputDialog("Descrição: ");
                 //Date data = new Date();
                 if(!descricao.isEmpty() && descricao != null){

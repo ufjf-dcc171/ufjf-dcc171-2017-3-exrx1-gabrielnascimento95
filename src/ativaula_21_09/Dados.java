@@ -13,34 +13,36 @@ import javax.swing.JTextField;
  * @author Gabriel_Nascimento
  */
 public class Dados {
-    private Double latitude;
-    private Double longitude;
+    private String latitude;
+    private String longitude;
     private String descricao;
     private Date dataEvento;
 
-    public Dados(Double latitude, Double longitude, String descricao) {
+    public Dados(String latitude, String longitude, String descricao) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.descricao = descricao;
     }
 
     Dados() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       this.latitude = null;
+        this.longitude = null;
+        this.descricao = null;
     }
 
-    public Double getLatitude() {
+    public String getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Double latitude) {
+    public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
 
-    public Double getLongitude() {
+    public String getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Double longitude) {
+    public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
 
